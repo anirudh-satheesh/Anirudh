@@ -77,35 +77,30 @@ const Portfolio = () => {
     setIsSubmitting(true);
     setFormErrors({});
     
-    try {
-      const response = await fetch('https://formspree.io/f/mldlboww', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          email: formData.email,
-          message: formData.message
-        })
-      });
-      
-      if (response.ok) {
-        alert(`Thank you for your submission, ${formData.firstName}! Your message has been received.`);
-        setFormData({
-          firstName: '',
-          email: '',
-          message: ''
-        });
-      } else {
-        alert('There was an error sending your message. Please try again later.');
-      }
-    } catch (error) {
-      alert('There was an error sending your message. Please try again later.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+try {
+  const response = await fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      firstName: formData.firstName,
+      email: formData.email,
+      message: formData.message
+    })
+  });
+
+  if (response.ok) {
+    alert(`Thank you for your submission, ${formData.firstName}! Your message has been received.`);
+    setFormData({ firstName: '', email: '', message: '' });
+  } else {
+    alert('There was an error sending your message. Please try again later.');
+  }
+} catch (error) {
+  alert('There was an error sending your message. Please try again later.');
+} finally {
+  setIsSubmitting(false);
+}
+
+};
 
   // Handle form input changes
   const handleInputChange = (e) => {
