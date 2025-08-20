@@ -165,7 +165,7 @@ return (
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img
-              src="/logo-nobg.png"
+              src="/images/logo-nobg.png"
               alt="Anirudh Logo"
               className="w-16 h-10 object-contain"
             />
