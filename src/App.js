@@ -407,7 +407,22 @@ return (
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-16 bg-[#0a1220]">
+      <section id="achievements" className="py-18 bg-[#0a1220] relative">
+        {/* Top-left Orb (Achievements) - Only visible on desktop */}
+        <div className="hidden lg:block absolute left-12 top-12 z-10">
+          <div className="dark-orb">
+            <div className="orb-highlight"></div>
+            <div className="orb-core"></div>
+          </div>
+        </div>
+
+        {/* Bottom-right Orb (Achievements) - Only visible on desktop */}
+        <div className="hidden lg:block absolute right-12 bottom-12 z-10">
+          <div className="dark-orb">
+            <div className="orb-highlight"></div>
+            <div className="orb-core"></div>
+          </div>
+        </div>
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-lighter mb-4">
@@ -489,7 +504,14 @@ return (
         </div>
       </section>
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-[#0a1220]">
+      <section id="contact" className="py-16 bg-[#0a1220] relative">
+        {/* Dark Orb on the left side */}
+        <div className="absolute left-12 bottom-12 -translate-y-1/2 z-10">
+          <div className="dark-orb">
+            <div className="orb-highlight"></div>
+            <div className="orb-core"></div>
+          </div>
+        </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-lighter mb-4 mt-4">

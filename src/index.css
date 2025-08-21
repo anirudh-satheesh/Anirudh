@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dark-orb {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, #5a6bb6 55%, #23264a 100%);
+  box-shadow:
+    0 0 120px 40px #7faaff55,
+    0 0 60px 10px #4f5b8acc,
+    0 0 220px 60px #23264a88;
+  border: 8px solid #23264a;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+  animation: orb-float 4s ease-in-out infinite alternate;
+}
+
+@keyframes orb-float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-16px); }
+}
+
+.dark-orb:hover {
+  box-shadow:
+    0 0 180px 80px #b3c6ffbb,
+    0 0 120px 40px #7faaffcc,
+    0 0 260px 80px #23264acc;
+  transform: scale(1.12);
+}
+
+.dark-orb::before {
+  /* Animated shimmer */
+  content: '';
+  position: absolute;
+  left: -40%;
+  top: 10%;
+  width: 180%;
+  height: 80%;
+  background: linear-gradient(120deg, transparent 40%, #b3c6ff33 60%, transparent 80%);
+  opacity: 0.5;
+  filter: blur(12px);
+  pointer-events: none;
+  animation: orb-shimmer 2.5s linear infinite;
+}
+
+@keyframes orb-shimmer {
+  0% { left: -40%; }
+  100% { left: 40%; }
+}
+
+.orb-highlight {
+  /* Glassy highlight */
+  position: absolute;
+  top: 28%;
+  left: 18%;
+  width: 90px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #fff8 60%, #b3c6ff44 100%);
+  opacity: 0.7;
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.orb-core {
+  /* Inner animated core */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e3eaff 0%, #5a6bb6 80%);
+  opacity: 0.85;
+  filter: blur(6px);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px 10px #b3c6ff88, 0 0 80px 20px #7faaff44;
+  animation: orb-core-pulse 2.5s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes orb-core-pulse {
+  0% { opacity: 0.85; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+}
