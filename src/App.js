@@ -325,7 +325,7 @@ return (
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 px-40 bg-[#0a1220]">
+      <section id="projects" className="py-16 px-8 lg:px-40 bg-[#0a1220]">
         <div className="w-full mx-auto px-0 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-lighter mt-4 mb-4">
