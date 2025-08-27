@@ -409,15 +409,17 @@ return (
       {/* Achievements Section */}
       <section id="achievements" className="py-18 bg-[#0a1220] relative">
         {/* Top-left Orb (Achievements) - Only visible on desktop */}
-        <div className="hidden lg:block absolute left-12 top-12 z-10">
+        <div className="hidden lg:block absolute top-12 left-[clamp(0.5rem,2vw,3rem)] z-0">
           <div className="dark-orb">
             <div className="orb-highlight"></div>
             <div className="orb-core"></div>
           </div>
         </div>
 
+
+
         {/* Bottom-right Orb (Achievements) - Only visible on desktop */}
-        <div className="hidden lg:block absolute right-12 bottom-12 z-10">
+        <div className="hidden lg:block absolute right-12 bottom-12 ">
           <div className="dark-orb">
             <div className="orb-highlight"></div>
             <div className="orb-core"></div>
@@ -506,23 +508,27 @@ return (
       {/* Contact Section */}
       <section id="contact" className="py-16 bg-[#0a1220] relative">
         {/* Dark Orb on the left side */}
-        <div className="absolute left-12 bottom-12 -translate-y-1/2 z-10">
+        <div className="hidden lg:block absolute left-[clamp(0.5rem,2vw,3rem)] bottom-24 z-0">
           <div className="dark-orb">
             <div className="orb-highlight"></div>
             <div className="orb-core"></div>
           </div>
         </div>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-lighter mb-4 mt-4">
               Get In Touch
             </h2>
             <p className="text-lg text-text-muted">
-              I'm always interested in new opportunities and collaborations.<br></br>
+              I'm always interested in new opportunities and collaborations.<br />
               Let's discuss how we can work together!
             </p>
           </div>
-          <form onSubmit={handleSubmit} className="bg-[#101a26] rounded-xl shadow-lg p-8 space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-[#101a26] rounded-xl shadow-lg p-8 space-y-6"
+          >
             <div>
               <label htmlFor="firstName" className="block text-sm font-medium text-text-lighter mb-2">
                 First Name <span className="text-red-500">*</span>

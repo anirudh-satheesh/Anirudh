@@ -3,21 +3,24 @@
 @tailwind utilities;
 
 .dark-orb {
-  width: 260px;
-  height: 260px;
+  /* Fluid width & height */
+  width: clamp(110px, calc(10vw + 60px), 260px);
+  height: clamp(110px, calc(10vw + 60px), 260px);
+
   border-radius: 50%;
+  border: 8px solid #23264a;
   background: radial-gradient(circle at 60% 40%, #5a6bb6 55%, #23264a 100%);
   box-shadow:
     0 0 120px 40px #7faaff55,
     0 0 60px 10px #4f5b8acc,
     0 0 220px 60px #23264a88;
-  border: 8px solid #23264a;
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s;
   cursor: pointer;
   animation: orb-float 4s ease-in-out infinite alternate;
 }
+
 
 @keyframes orb-float {
   0% { transform: translateY(0); }
@@ -40,7 +43,7 @@
   top: 10%;
   width: 180%;
   height: 80%;
-  background: linear-gradient(120deg, transparent 40%, #b3c6ff33 60%, transparent 80%);
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
   opacity: 0.5;
   filter: blur(12px);
   pointer-events: none;
@@ -88,3 +91,4 @@
   0% { opacity: 0.85; transform: translate(-50%, -50%) scale(1); }
   100% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
 }
+
