@@ -152,7 +152,7 @@ const Portfolio = () => {
       description: "A responsive portfolio website showcasing projects and skills with smooth animations, contact forms, and optimized performance.",
       image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=250&fit=crop",
       technologies: ["React", "Tailwind", "Vercel"],
-      liveUrl: "https://anirudh-s.vercel.app",
+      liveUrl: "https://anirudhverse.vercel.app",
       githubUrl: "https://github.com/username/portfolio-website"
     }
   ];
@@ -325,7 +325,7 @@ return (
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 px-0 bg-[#0a1220]">
+      <section id="projects" className="py-16 px-40 bg-[#0a1220]">
         <div className="w-full mx-auto px-0 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-lighter mt-4 mb-4">
