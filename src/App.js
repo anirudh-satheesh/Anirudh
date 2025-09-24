@@ -130,12 +130,12 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: "JobTune - AI powered ATS",
+      title: "Resumemind - AI powered ATS",
       description: "An AI-powered Applicant Tracking System that streamlines the hiring process, making it easier for companies to find the right talent efficiently.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-      technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
-      liveUrl: "#",
-      githubUrl: "#"
+      technologies: ["React", "Vite", "TypeScript", "Puter.js"],
+      liveUrl: "resumemindai.vercel.app",
+      githubUrl: "https://github.com/anirudh-satheesh/ai-resume-analyzer"
     },
     {
       id: 3,
@@ -153,7 +153,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=250&fit=crop",
       technologies: ["React", "Tailwind", "Vercel"],
       liveUrl: "https://anirudhverse.vercel.app",
-      githubUrl: "https://github.com/username/portfolio-website"
+      githubUrl: "https://github.com/anirudh-satheesh/Anirudh"
     }
   ];
 
