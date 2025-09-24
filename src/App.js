@@ -134,7 +134,7 @@ const Portfolio = () => {
       description: "An AI-powered Applicant Tracking System that streamlines the hiring process, making it easier for companies to find the right talent efficiently.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
       technologies: ["React", "Vite", "TypeScript", "Puter.js"],
-      liveUrl: "resumemindai.vercel.app",
+      liveUrl: "https://resumemindai.vercel.app",
       githubUrl: "https://github.com/anirudh-satheesh/ai-resume-analyzer"
     },
     {
